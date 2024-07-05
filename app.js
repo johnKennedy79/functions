@@ -4,7 +4,7 @@ console.log("Hello");
 function sayHello() {
     console.log("Hello World!");
 }
-sayHello();
+
 
 function argumentFunction(ar1, ar2){
     console.log(ar1, ar2);
@@ -76,4 +76,38 @@ function calculate(a, b, operator) {
   const anotherResult = calculate(2, 10, "*");
 console.log("Another result is", anotherResult);
 
-calculate(15, 7, "-")
+
+//Function Scope 
+
+//?? what everyones favourit color is??
+//jamie magenta 
+//riley green 
+//james blue 
+//kash pastels wheat
+//black or Red 
+
+console.log("Hello world!");
+
+const name = "Bob";
+
+function sayHello() {
+  console.log("Hello " + name + "!");
+}
+
+sayHello();
+console.log(name);
+
+// creating variables in the function scope
+
+function sayHelloagain() {
+  const name2 = "John";
+  console.log("Hello " + name2 + "!");
+}
+
+sayHelloagain()
+
+console.log(name2)
+
+// 💭 Variables that are only scoped within a function can be forgotten, saving memory. If we only used global variables, we could never clear anything up behind us.
+
+// 💭 It's worth noticing that with scoped functions you can reuse variables within functions without worrying about pollution or functions affecting other. Global scoped variables used within more than one function could lead to conflicts and unexpected results, as both functions might try to alter the global variable at the same time.
